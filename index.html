@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#d5efb8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>피드백보드 — 작은 감상의 숲</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-icon">✳</span> 피드백보드 <span class="edition">EXHIBITION GUESTBOOK</span></a><span class="live"><i></i> 전시 관람 중</span></header>
+<main>
+  <section class="intro"><div><div class="eyebrow">A LITTLE SPACE FOR YOUR THOUGHTS</div><h1>작은 감상이 모이는 곳<span>✳</span></h1><p>천천히 둘러보고, 마음에 남은 한 조각을 놓아주세요.</p></div><div class="ticket">OPEN EXHIBITION<br><strong>네 개의 방, 다섯 명의 산책자</strong><span>YOUR WORDS LIVE HERE ↗</span></div></section>
+  <div class="game-shell">
+    <div class="game-toolbar"><div><span class="square"></span><strong id="view-title">전시 전체 지도</strong><span class="map-label"> / EXHIBITION MAP</span></div><button id="back" hidden>← 전체 지도</button><span id="map-hint">방을 클릭하면 가까이 볼 수 있어요 ↗</span></div>
+    <section id="map-view" aria-label="전시 공간 지도"><div class="map-ground"><div class="windows"><i></i><i></i><i></i><i></i><i></i></div><div class="room-grid" id="room-grid"></div><div class="hallway"><span>← 천천히 걸어도 좋아요 →</span></div><div class="plant plant-one">♣</div><div class="plant plant-two">♣</div><div class="entry">E N T R A N C E</div><div id="characters" aria-label="관람객 다섯 명"></div></div></section>
+    <section id="room-view" hidden aria-label="선택한 전시실"><div class="room-detail"><div class="room-info"><span class="eyebrow" id="room-number"></span><h2 id="room-title"></h2><p id="room-description"></p><span class="small-note">가상의 전시 작품 · 교체 가능한 샘플</span></div><div id="art-gallery" class="art-gallery"></div></div><div class="room-feedback"><div class="section-label">이 방에 머문 감상 <span id="room-count"></span></div><div id="feedback-list"></div></div></section>
+    <div class="game-footer"><span><i class="tiny-person"></i> 5명의 관람객이 산책하고 있어요</span><span>말풍선은 5초마다 바뀝니다 <b>↻</b></span></div>
+  </div>
+  <section class="composer" aria-labelledby="compose-title"><div class="portrait"><div class="pixel-face">☺</div><span>YOU</span></div><div class="compose-body"><div class="compose-heading"><h2 id="compose-title">당신의 감상을 들려주세요</h2><span id="destination">TO. 전시 전체</span></div><form id="feedback-form"><label class="sr-only" for="message">전시 피드백</label><textarea id="message" maxlength="180" required placeholder="어떤 장면이 마음에 남았나요? 당신의 이야기가 말풍선이 되어 떠다녀요."></textarea><div class="form-bottom"><div class="name-field"><label for="nickname">이름</label><input id="nickname" maxlength="16" placeholder="이름 없는 산책자" autocomplete="off"></div><span id="char-count">0 / 180</span><button class="submit" type="submit">감상 남기기 <span>↗</span></button></div></form></div></section>
+  <div class="bottom-note"><span>✧ 작은 한마디도 이 전시의 일부가 됩니다.</span><span>이 기기에만 저장 · 개인정보는 적지 말아주세요</span></div><p id="status" role="status" aria-live="polite"></p>
+</main><footer class="page-footer"><span>피드백보드 © 2026</span><span>MADE OF LITTLE MOMENTS & PIXELS</span><button id="export">내 방명록 내려받기 ↓</button></footer>
+</body></html>
